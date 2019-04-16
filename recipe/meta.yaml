@@ -1,5 +1,5 @@
 {% set name = "glfw" %}
-{% set version = "3.2.1" %}
+{% set version = "3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
   fn: glfw-{{ version}}.tar.gz
-  sha256: e10f0de1384d75e6fc210c53e91843f6110d6c4f3afbfb588130713c2f9d8fe8
+  sha256: 81bf5fde487676a8af55cb317830703086bb534c53968d71936e7b48ee5a0f3e
   patches:
     # https://github.com/glfw/glfw/pull/1367
     - GNUInstallDirs.patch
