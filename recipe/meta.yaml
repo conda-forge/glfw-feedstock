@@ -28,6 +28,7 @@ requirements:
     - xorg-libxrandr         # [linux]
     - xorg-libxinerama       # [linux]
     - xorg-libxcursor        # [linux]
+    - xorg-libxi             # [linux]
   run:
     - xorg-libxrandr         # [linux]
     - xorg-libxcursor        # [linux]
