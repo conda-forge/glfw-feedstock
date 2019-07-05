@@ -11,18 +11,15 @@ source:
   sha256: 81bf5fde487676a8af55cb317830703086bb534c53968d71936e7b48ee5a0f3e
 
 build:
-  number: 0
-  skip: True  # [osx]
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
   build:
-    # if your project compiles code (such as a C extension) then add the required compilers as separate entries here.
-    # compilers are named 'c', 'cxx' and 'fortran'.
     - {{ compiler('c') }}
     - cmake
     - m2-patch               # [win]
-    - pkg-config             # [not win]
+    - pkg-config             # [linux]
   host:
     - xorg-libx11            # [linux]
     - xorg-libxrandr         # [linux]
@@ -35,8 +32,9 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libglfw.so               # [linux]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [linux]
+    - test -f $PREFIX/lib/libglfw.so                         # [linux]
+    - test -f $PREFIX/lib/libglfw.dylib                      # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME            # [not win]
     - if not exist %PREFIX%/Library/lib/glfw3dll.lib exit 1  # [win]
     - if not exist %PREFIX%/Library/bin/glfw3.dll exit 1     # [win]
 
