@@ -32,9 +32,7 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libglfw.so                         # [linux]
-    - test -f $PREFIX/lib/libglfw.dylib                      # [osx]
-    - conda inspect linkages -p $PREFIX $PKG_NAME            # [not win]
+    - test -f $PREFIX/lib/libglfw${SHLIB_EXT}                # [unix]
     - if not exist %PREFIX%/Library/lib/glfw3dll.lib exit 1  # [win]
     - if not exist %PREFIX%/Library/bin/glfw3.dll exit 1     # [win]
 
