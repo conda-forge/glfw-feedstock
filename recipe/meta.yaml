@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - cmake
     - m2-patch               # [win]
-    - pkg-config             # [linux]
+    - pkg-config             # [unix]
   host:
     - xorg-libx11            # [linux]
     - xorg-libxrandr         # [linux]
