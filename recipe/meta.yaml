@@ -11,7 +11,7 @@ source:
   sha256: 98768e12e615fbe9f3386f5bbfeb91b5a3b45a8c4c77159cef06b1f6ff749537
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
@@ -40,7 +40,7 @@ test:
 
 about:
   home: https://www.glfw.org/
-  license: zlib
+  license: Zlib
   license_file: LICENSE.md
   summary: 'Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development.'
 
