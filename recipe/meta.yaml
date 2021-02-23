@@ -1,5 +1,5 @@
 {% set name = "glfw" %}
-{% set version = "3.3.2" %}
+{% set version = "3.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,11 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  fn: glfw-{{ version}}.tar.gz
-  sha256: 98768e12e615fbe9f3386f5bbfeb91b5a3b45a8c4c77159cef06b1f6ff749537
+  fn: glfw-{{ version }}.tar.gz
+  sha256: aa9922b55a464d5bab58fcbe5a619f517d54e3dc122361c116de573670006a7a
 
 build:
-  number: 1
-  skip: True  # [win and vc<14]
+  number: 0
 
 requirements:
   build:
@@ -34,7 +33,6 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/lib/libglfw${SHLIB_EXT}                # [unix]
-    - conda inspect linkages -p $PREFIX $PKG_NAME            # [unix]
     - if not exist %PREFIX%/Library/lib/glfw3dll.lib exit 1  # [win]
     - if not exist %PREFIX%/Library/bin/glfw3.dll exit 1     # [win]
 
@@ -42,7 +40,7 @@ about:
   home: https://www.glfw.org/
   license: Zlib
   license_file: LICENSE.md
-  summary: 'Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development.'
+  summary: Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development.
 
   # The remaining entries in this section are optional, but recommended
   description: |
