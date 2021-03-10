@@ -15,7 +15,7 @@ cd build
 # if [[ "$c_compiler" == "gcc" ]]; then
 #   export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib"
 # fi
-cmake                                 \
+cmake ${CMAKE_ARGS}                                 \
     -DCMAKE_PREFIX_PATH=${PREFIX}     \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}  \
     -DCMAKE_INSTALL_LIBDIR=lib        \
