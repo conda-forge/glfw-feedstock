@@ -20,6 +20,7 @@ requirements:
     - m2-patch               # [win]
     - pkg-config             # [unix]
     - ninja                  # [win]
+    - make                   # [unix]
   host:
     - xorg-libx11            # [linux]
     - xorg-libxrandr         # [linux]
