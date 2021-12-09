@@ -1,5 +1,5 @@
 {% set name = "glfw" %}
-{% set version = "3.3.5" %}
+{% set version = "3.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
   fn: glfw-{{ version }}.tar.gz
-  sha256: 32fdb8705784adfe3082f97e0d41e7c515963e977b5a14c467a887cf0da827b5
+  sha256: ed07b90e334dcd39903e6288d90fa1ae0cf2d2119fec516cf743a0a404527c02
 
 build:
   number: 0
