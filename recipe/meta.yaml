@@ -11,7 +11,10 @@ source:
   sha256: f30f42e05f11e5fc62483e513b0488d5bceeab7d9c5da0ffe2252ad81816c713
 
 build:
-  number: 0
+  number: 1
+  # https://abi-laboratory.pro/index.php?view=timeline&l=glfw
+  run_exports:
+    - {{ pin_subpackage(name, max_pin='x') }}
 
 requirements:
   build:
