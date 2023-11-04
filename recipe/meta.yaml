@@ -11,7 +11,7 @@ source:
   sha256: f30f42e05f11e5fc62483e513b0488d5bceeab7d9c5da0ffe2252ad81816c713
 
 build:
-  number: 1
+  number: 2
   # https://abi-laboratory.pro/index.php?view=timeline&l=glfw
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
@@ -65,4 +65,5 @@ extra:
     - hmaarrfk
     - kmuehlbauer
     - hoechenberger
+    - ryanvolz
     - traversaro

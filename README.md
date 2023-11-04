@@ -214,5 +214,6 @@ Feedstock Maintainers
 * [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@hoechenberger](https://github.com/hoechenberger/)
 * [@kmuehlbauer](https://github.com/kmuehlbauer/)
+* [@ryanvolz](https://github.com/ryanvolz/)
 * [@traversaro](https://github.com/traversaro/)
 
