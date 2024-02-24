@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - sysroot_linux-64 2.17  # [linux64]
     - cmake
     - m2-patch               # [win]
     - pkg-config             # [unix]
@@ -30,6 +31,8 @@ requirements:
     - xorg-libxinerama       # [linux]
     - xorg-libxcursor        # [linux]
     - xorg-libxi             # [linux]
+    - libxkbcommon           # [linux]
+    - wayland                # [linux]
   run:
     - xorg-libxrandr         # [linux]
     - xorg-libxcursor        # [linux]
