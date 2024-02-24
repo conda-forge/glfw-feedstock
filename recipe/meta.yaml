@@ -7,8 +7,12 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  fn: glfw-{{ version }}.tar.gz
   sha256: c038d34200234d071fae9345bc455e4a8f2f544ab60150765d7704e08f3dac01
+  patches:
+    # Mostly taken from
+    # https://github.com/glfw/glfw/issues/2139
+    # To enable compilation with older libc
+    - patches_for_conda_forge.patch
 
 build:
   number: 0
