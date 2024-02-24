@@ -36,9 +36,6 @@ requirements:
     - xorg-libxi             # [linux]
     - libxkbcommon           # [linux]
     - wayland                # [linux]
-  run:
-    - xorg-libxrandr         # [linux]
-    - xorg-libxcursor        # [linux]
 
 test:
   commands:
