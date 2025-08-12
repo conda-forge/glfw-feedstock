@@ -29,7 +29,7 @@ requirements:
     - ninja                  # [win]
     - make                   # [unix]
   host:
-    - xorg-xorgproto	       # [linux]
+    - xorg-xorgproto         # [linux]
     - xorg-libx11            # [linux]
     - xorg-libxrandr         # [linux]
     - xorg-libxinerama       # [linux]
