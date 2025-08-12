@@ -1,3 +1,4 @@
+set -ex
 mkdir build
 cd build
 
@@ -15,7 +16,7 @@ cd build
 # if [[ "$c_compiler" == "gcc" ]]; then
 #   export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib"
 # fi
-cmake ${CMAKE_ARGS}                                 \
+cmake ${CMAKE_ARGS}                   \
     -DCMAKE_PREFIX_PATH=${PREFIX}     \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}  \
     -DCMAKE_INSTALL_LIBDIR=lib        \
@@ -25,4 +26,5 @@ cmake ${CMAKE_ARGS}                                 \
     -DGLFW_BUILD_DOCS=OFF             \
     ..
 
+make -j${CPU_COUNT}
 make install
