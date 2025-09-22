@@ -19,9 +19,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - cmake
-    - m2-patch               # [win]
-    - pkg-config             # [unix]
     - ninja                  # [win]
+    - pkg-config             # [unix]
     - make                   # [unix]
   host:
     - xorg-xorgproto         # [linux]
