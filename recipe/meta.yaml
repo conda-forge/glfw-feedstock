@@ -2,7 +2,7 @@
 
 package:
   name: glfw
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/glfw/glfw/archive/{{ version }}.tar.gz
