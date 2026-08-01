@@ -1,4 +1,4 @@
-{% set version = "3.4" %}
+{% set version = "3.5.1" %}
 
 package:
   name: glfw
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/glfw/glfw/archive/{{ version }}.tar.gz
-  sha256: c038d34200234d071fae9345bc455e4a8f2f544ab60150765d7704e08f3dac01
+  sha256: 5234f4f29473e9a06bc7847d8371858dd135d38466eeeaa652fdc9f8f9ff0c20
   patches:
     # Mostly taken from
     # https://github.com/glfw/glfw/issues/2139
@@ -14,7 +14,7 @@ source:
     - patches_for_conda_forge.patch
 
 build:
-  number: 1
+  number: 0
   # https://abi-laboratory.pro/index.php?view=timeline&l=glfw
   run_exports:
     - {{ pin_subpackage('glfw', max_pin='x') }}
